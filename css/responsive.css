@@ -1,0 +1,172 @@
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile adjustments for light theme */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 8px 0;
+    }
+    
+    .top-left span {
+        font-size: 12px;
+    }
+}
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    
+    /* Top Bar */
+    .top-bar-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .top-right {
+        justify-content: center;
+    }
+    
+    /* Navbar */
+    .nav-wrapper {
+        flex-wrap: wrap;
+    }
+    
+    .search-bar {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 15px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .nav-links.active {
+        max-height: 500px;
+    }
+    
+    .nav-link {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    /* WhatsApp Float */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-top {
+        bottom: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    
+    .logo a {
+        font-size: 20px;
+    }
+    
+    .logo i {
+        font-size: 24px;
+    }
+    
+    .nav-icon {
+        font-size: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .product-name {
+        font-size: 14px;
+        min-height: 38px;
+    }
+    
+    .price-current {
+        font-size: 20px;
+    }
+    
+    .price-original {
+        font-size: 14px;
+    }
+    
+    .btn-cart,
+    .btn-view {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .btn-view {
+        padding: 10px;
+    }
+}
+/* Products Page Mobile */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 20px 0 15px;
+        margin-bottom: 20px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .page-subtitle {
+        font-size: 14px;
+    }
+    
+    .products-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .filters-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        max-height: 100vh;
+        z-index: 9999;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-lg);
+        padding: 20px;
+    }
+    
+    .filters-sidebar.active {
+        left: 0;
+    }
+}
