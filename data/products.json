@@ -1,0 +1,167 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Smart LED Bulb",
+      "slug": "smart-led-bulb",
+      "category": "Electronics",
+      "price": 599,
+      "mrp": 999,
+      "discount": 40,
+      "description": "WiFi enabled smart bulb with 16 million colors. Control with mobile app. Compatible with Alexa and Google Assistant.",
+      "image": "https://images.unsplash.com/photo-1531685250784-7569952593d2?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1531685250784-7569952593d2?w=500",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+      ],
+      "features": [
+        "16M Color Options",
+        "WiFi Control",
+        "Voice Control Compatible",
+        "Energy Saving"
+      ],
+      "stock": true,
+      "trending": true,
+      "featured": true,
+      "rating": 4.5,
+      "reviews": 156,
+      "sizes": [],
+      "colors": ["White", "Warm White", "RGB"]
+    },
+    {
+      "id": 2,
+      "name": "Manual Vegetable Chopper",
+      "slug": "vegetable-chopper",
+      "category": "Kitchen",
+      "price": 349,
+      "mrp": 699,
+      "discount": 50,
+      "description": "Quick and easy vegetable chopper with 5 sharp stainless steel blades. Chop vegetables in seconds! Easy to clean and dishwasher safe.",
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500"
+      ],
+      "features": [
+        "5 Sharp Blades",
+        "Easy to Clean",
+        "Compact Design",
+        "BPA Free Plastic"
+      ],
+      "stock": true,
+      "trending": false,
+      "featured": true,
+      "rating": 4.7,
+      "reviews": 243,
+      "sizes": ["Medium", "Large"],
+      "colors": ["Green", "White"]
+    },
+    {
+      "id": 3,
+      "name": "Wireless Phone Charger",
+      "slug": "wireless-charger",
+      "category": "Mobile Accessories",
+      "price": 449,
+      "mrp": 899,
+      "discount": 50,
+      "description": "Fast wireless charging pad. Compatible with all Qi-enabled devices. LED indicator and overcharge protection.",
+      "image": "https://images.unsplash.com/photo-1591290619762-d71b77e8c7e3?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1591290619762-d71b77e8c7e3?w=500"
+      ],
+      "features": [
+        "Fast Charging",
+        "Universal Compatibility",
+        "LED Indicator",
+        "Overcharge Protection"
+      ],
+      "stock": true,
+      "trending": true,
+      "featured": true,
+      "rating": 4.3,
+      "reviews": 89,
+      "sizes": [],
+      "colors": ["Black", "White"]
+    },
+    {
+      "id": 4,
+      "name": "Stainless Steel Water Bottle",
+      "slug": "water-bottle",
+      "category": "Home & Living",
+      "price": 299,
+      "mrp": 599,
+      "discount": 50,
+      "description": "Insulated stainless steel bottle. Keeps drinks cold for 24 hours, hot for 12 hours. Leak-proof design.",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500"
+      ],
+      "features": [
+        "24hr Cold",
+        "12hr Hot",
+        "Leak Proof",
+        "BPA Free"
+      ],
+      "stock": true,
+      "trending": false,
+      "featured": true,
+      "rating": 4.6,
+      "reviews": 178,
+      "sizes": ["500ml", "750ml", "1L"],
+      "colors": ["Silver", "Black", "Blue", "Pink"]
+    },
+    {
+      "id": 5,
+      "name": "Portable Bluetooth Speaker",
+      "slug": "bluetooth-speaker",
+      "category": "Electronics",
+      "price": 799,
+      "mrp": 1499,
+      "discount": 47,
+      "description": "Waterproof portable speaker with 10 hours battery life. Deep bass and crystal clear sound.",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500"
+      ],
+      "features": [
+        "Waterproof IPX7",
+        "10hr Battery",
+        "Deep Bass",
+        "Bluetooth 5.0"
+      ],
+      "stock": true,
+      "trending": true,
+      "featured": false,
+      "rating": 4.4,
+      "reviews": 312,
+      "sizes": [],
+      "colors": ["Black", "Blue", "Red"]
+    },
+    {
+      "id": 6,
+      "name": "Car Phone Holder",
+      "slug": "car-phone-holder",
+      "category": "Car Accessories",
+      "price": 199,
+      "mrp": 499,
+      "discount": 60,
+      "description": "360-degree rotating car mount. Strong suction cup. Fits all phone sizes.",
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=500",
+      "images": [
+        "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=500"
+      ],
+      "features": [
+        "360° Rotation",
+        "Strong Suction",
+        "Universal Fit",
+        "Easy Installation"
+      ],
+      "stock": true,
+      "trending": false,
+      "featured": false,
+      "rating": 4.2,
+      "reviews": 67,
+      "sizes": [],
+      "colors": ["Black"]
+    }
+  ]
+}
