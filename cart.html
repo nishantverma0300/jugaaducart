@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping Cart - JugaaduCart">
+    
+    <title>Shopping Cart - JugaaduCart</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-left">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Delivery on All Orders | 7-10 Days Delivery</span>
+                    </div>
+                    <div class="top-right">
+                        <a href="https://wa.me/918865079136" target="_blank" class="top-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/jugaaducart" target="_blank" class="top-link">
+                            <i class="fab fa-instagram"></i> @jugaaducart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="logo-text">Jugaadu<span class="highlight">Cart</span></span>
+                        </a>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Nav Icons -->
+                    <div class="nav-icons">
+                        <a href="cart.html" class="nav-icon cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link">All Products</a>
+                    <a href="products.html?category=kitchen" class="nav-link">Kitchen</a>
+                    <a href="products.html?category=electronics" class="nav-link">Electronics</a>
+                    <a href="products.html?category=home" class="nav-link">Home & Living</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span>/</span>
+                    <span>Shopping Cart</span>
+                </div>
+                <h1 class="page-title">Shopping Cart</h1>
+                <p class="page-subtitle">Review your items before checkout</p>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-layout">
+                    
+                    <!-- Cart Items -->
+                    <div class="cart-items-container">
+                        <div class="cart-items" id="cartItems">
+                            <!-- Cart items will be loaded here -->
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading cart...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="cart-summary-container">
+                        <div class="cart-summary">
+                            <h3 class="summary-title">Order Summary</h3>
+                            
+                            <div class="summary-row">
+                                <span>Subtotal (<span id="itemCount">0</span> items)</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span class="free-tag">FREE</span>
+                            </div>
+                            
+                            <div class="summary-row cod-row">
+                                <span>
+                                    COD Prepaid
+                                    <i class="fas fa-info-circle" title="₹30-50 prepaid for booking confirmation"></i>
+                                </span>
+                                <span id="codCharges">₹0</span>
+                            </div>
+                            
+                            <div class="summary-divider"></div>
+                            
+                            <div class="summary-row total-row">
+                                <span>Total</span>
+                                <span id="totalAmount">₹0</span>
+                            </div>
+                            
+                            <div class="summary-savings" id="savingsInfo"></div>
+                            
+                            <button class="btn-checkout" id="checkoutBtn" onclick="proceedToCheckout()">
+                                <i class="fas fa-lock"></i>
+                                Proceed to Checkout
+                            </button>
+                            
+                            <a href="products.html" class="btn-continue-shopping">
+                                <i class="fas fa-arrow-left"></i>
+                                Continue Shopping
+                            </a>
+                            
+                            <!-- Trust Badges -->
+                            <div class="trust-badges">
+                                <div class="trust-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure Payment</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="fas fa-undo"></i>
+                                    <span>Easy Returns</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Empty Cart Message (Hidden by default) -->
+                <div class="empty-cart" id="emptyCart" style="display: none;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Your Cart is Empty</h2>
+                    <p>Looks like you haven't added anything to your cart yet</p>
+                    <a href="products.html" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i>
+                        Start Shopping
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <h3>JugaaduCart</h3>
+                    <p class="footer-desc">
+                        Small Products, Big Solutions.<br>
+                        Premium quality products at unbeatable prices.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/jugaaducart" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/918865079136" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:jugaaducart@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Shop All</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Policies -->
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="refund.html">Return & Refund</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:jugaaducart@gmail.com">jugaaducart@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/918865079136">+91 88650 79136</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Uttar Pradesh, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 JugaaduCart. All Rights Reserved.</p>
+                <p class="footer-credit">Made with ❤️ for Smart Shoppers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918865079136?text=Hi%20JugaaduCart,%20I%20want%20to%20know%20about%20products" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

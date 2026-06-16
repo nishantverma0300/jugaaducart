@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all products at JugaaduCart - Kitchen tools, Electronics, Home & Living and more.">
+    
+    <title>All Products - JugaaduCart</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-left">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Delivery on All Orders | 7-10 Days Delivery</span>
+                    </div>
+                    <div class="top-right">
+                        <a href="https://wa.me/918865079136" target="_blank" class="top-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/jugaaducart" target="_blank" class="top-link">
+                            <i class="fab fa-instagram"></i> @jugaaducart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="logo-text">Jugaadu<span class="highlight">Cart</span></span>
+                        </a>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Nav Icons -->
+                    <div class="nav-icons">
+                        <a href="cart.html" class="nav-icon cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link active">All Products</a>
+                    <a href="products.html?category=kitchen" class="nav-link">Kitchen</a>
+                    <a href="products.html?category=electronics" class="nav-link">Electronics</a>
+                    <a href="products.html?category=home" class="nav-link">Home & Living</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span>/</span>
+                    <span id="breadcrumbCurrent">All Products</span>
+                </div>
+                <h1 class="page-title" id="pageTitle">All Products</h1>
+                <p class="page-subtitle" id="pageSubtitle">Browse our complete collection</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-page">
+            <div class="container">
+                
+                <div class="products-layout">
+                    
+                    <!-- Sidebar Filters -->
+                    <aside class="filters-sidebar" id="filtersSidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fas fa-filter"></i> Filters</h3>
+                            <button class="clear-filters" id="clearFilters">
+                                <i class="fas fa-times"></i> Clear All
+                            </button>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-th-large"></i> Categories
+                            </h4>
+                            <div class="filter-options" id="categoryFilters">
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="all" checked>
+                                    <span>All Products</span>
+                                    <span class="count" id="count-all">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Kitchen">
+                                    <span>Kitchen Tools</span>
+                                    <span class="count" id="count-kitchen">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Electronics">
+                                    <span>Electronics</span>
+                                    <span class="count" id="count-electronics">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Home & Living">
+                                    <span>Home & Living</span>
+                                    <span class="count" id="count-home">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Mobile Accessories">
+                                    <span>Mobile Accessories</span>
+                                    <span class="count" id="count-mobile">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Beauty & Personal Care">
+                                    <span>Beauty & Care</span>
+                                    <span class="count" id="count-beauty">0</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="category" value="Car Accessories">
+                                    <span>Car Accessories</span>
+                                    <span class="count" id="count-car">0</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-rupee-sign"></i> Price Range
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="all" checked>
+                                    <span>All Prices</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="0-299">
+                                    <span>Under ₹299</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="300-599">
+                                    <span>₹300 - ₹599</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="600-999">
+                                    <span>₹600 - ₹999</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="1000-9999">
+                                    <span>₹1000 & Above</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Availability Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-box"></i> Availability
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" id="inStockOnly">
+                                    <span>In Stock Only</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Special Filters -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-star"></i> Special
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" id="trendingOnly">
+                                    <span>🔥 Trending Only</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" id="discountOnly">
+                                    <span>💰 On Sale</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                    <!-- Products Area -->
+                    <div class="products-area">
+                        
+                        <!-- Toolbar -->
+                        <div class="products-toolbar">
+                            <div class="toolbar-left">
+                                <button class="mobile-filter-btn" id="mobileFilterBtn">
+                                    <i class="fas fa-filter"></i> Filters
+                                </button>
+                                <p class="results-count">
+                                    Showing <strong id="resultsCount">0</strong> products
+                                </p>
+                            </div>
+                            <div class="toolbar-right">
+                                <label for="sortSelect">Sort by:</label>
+                                <select id="sortSelect" class="sort-select">
+                                    <option value="default">Default</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name-asc">Name: A to Z</option>
+                                    <option value="name-desc">Name: Z to A</option>
+                                    <option value="discount">Discount: High to Low</option>
+                                </select>
+                                <div class="view-toggle">
+                                    <button class="view-btn active" data-view="grid">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button class="view-btn" data-view="list">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Filters Tags -->
+                        <div class="active-filters" id="activeFilters"></div>
+
+                        <!-- Products Grid -->
+                        <div class="products-grid" id="productsGrid">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading products...
+                            </div>
+                        </div>
+
+                        <!-- No Results -->
+                        <div class="no-results" id="noResults" style="display: none;">
+                            <i class="fas fa-search"></i>
+                            <h3>No Products Found</h3>
+                            <p>Try adjusting your filters or search query</p>
+                            <button class="btn btn-primary" onclick="clearAllFilters()">
+                                <i class="fas fa-redo"></i> Reset Filters
+                            </button>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <h3>JugaaduCart</h3>
+                    <p class="footer-desc">
+                        Small Products, Big Solutions.<br>
+                        Premium quality products at unbeatable prices.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/jugaaducart" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/918865079136" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:jugaaducart@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Shop All</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Policies -->
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="refund.html">Return & Refund</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:jugaaducart@gmail.com">jugaaducart@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/918865079136">+91 88650 79136</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Uttar Pradesh, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 JugaaduCart. All Rights Reserved.</p>
+                <p class="footer-credit">Made with ❤️ for Smart Shoppers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918865079136?text=Hi%20JugaaduCart,%20I%20want%20to%20know%20about%20products" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="js/all-products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

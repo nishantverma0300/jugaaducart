@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout - JugaaduCart">
+    
+    <title>Checkout - JugaaduCart</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-left">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Delivery on All Orders | 7-10 Days Delivery</span>
+                    </div>
+                    <div class="top-right">
+                        <a href="https://wa.me/918865079136" target="_blank" class="top-link">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://instagram.com/jugaaducart" target="_blank" class="top-link">
+                            <i class="fab fa-instagram"></i> @jugaaducart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="logo-text">Jugaadu<span class="highlight">Cart</span></span>
+                        </a>
+                    </div>
+
+                    <!-- Checkout Steps -->
+                    <div class="checkout-steps">
+                        <div class="step completed">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Cart</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step active">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Details</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Nav Icons -->
+                    <div class="nav-icons">
+                        <a href="cart.html" class="nav-icon cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span>/</span>
+                    <a href="cart.html">Cart</a>
+                    <span>/</span>
+                    <span>Checkout</span>
+                </div>
+                <h1 class="page-title">Checkout</h1>
+                <p class="page-subtitle">Complete your order details</p>
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+            <div class="container">
+                <div class="checkout-layout">
+                    
+                    <!-- Checkout Form -->
+                    <div class="checkout-form-container">
+                        
+                        <!-- Customer Details -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">
+                                <i class="fas fa-user"></i>
+                                Customer Details
+                            </h2>
+                            
+                            <form id="checkoutForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="customerName">Full Name <span class="required">*</span></label>
+                                        <input type="text" id="customerName" name="customerName" required placeholder="Enter your full name">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="customerPhone">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="customerPhone" name="customerPhone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="customerEmail">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="customerEmail" name="customerEmail" required placeholder="your@email.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="customerAddress">Complete Address <span class="required">*</span></label>
+                                    <textarea id="customerAddress" name="customerAddress" required placeholder="House No, Street, Landmark" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="customerCity">City <span class="required">*</span></label>
+                                        <input type="text" id="customerCity" name="customerCity" required placeholder="City">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="customerState">State <span class="required">*</span></label>
+                                        <input type="text" id="customerState" name="customerState" required placeholder="State" value="Uttar Pradesh">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="customerPincode">Pincode <span class="required">*</span></label>
+                                        <input type="text" id="customerPincode" name="customerPincode" required placeholder="6-digit pincode" pattern="[0-9]{6}" maxlength="6">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="customerCountry">Country</label>
+                                        <input type="text" id="customerCountry" name="customerCountry" value="India" readonly>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="orderNotes">Order Notes (Optional)</label>
+                                    <textarea id="orderNotes" name="orderNotes" placeholder="Any special instructions for delivery" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">
+                                <i class="fas fa-credit-card"></i>
+                                Payment Method
+                            </h2>
+                            
+                            <div class="payment-options">
+                                <div class="payment-option active">
+                                    <input type="radio" name="paymentMethod" id="codPayment" value="cod" checked>
+                                    <label for="codPayment">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <div>
+                                            <strong>Cash on Delivery (COD)</strong>
+                                            <p>Pay the full amount when your order arrives</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <div class="checkout-summary-container">
+                        <div class="checkout-summary">
+                            <h3 class="summary-title">Order Summary</h3>
+                            
+                            <!-- Order Items -->
+                            <div class="summary-items" id="summaryItems">
+                                <!-- Items will be loaded here -->
+                            </div>
+                            
+                            <div class="summary-divider"></div>
+                            
+                            <!-- Price Breakdown -->
+                            <div class="summary-row">
+                                <span>Subtotal (<span id="summaryItemCount">0</span> items)</span>
+                                <span id="summarySubtotal">₹0</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span class="free-tag">FREE</span>
+                            </div>
+                            
+                            <div class="summary-divider"></div>
+                            
+                            <div class="summary-row total-row">
+                                <span>Total Amount</span>
+                                <span id="summaryTotal">₹0</span>
+                            </div>
+                            
+                            <!-- ✅ ONLY WHATSAPP BUTTON -->
+                            <button class="btn-whatsapp-order" onclick="orderViaWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                                Complete Order via WhatsApp
+                            </button>
+                            
+                            <a href="cart.html" class="btn-back-to-cart">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Cart
+                            </a>
+                            
+                            <!-- Security Badge -->
+                            <div class="security-badge">
+                                <i class="fas fa-lock"></i>
+                                <span>Secure Checkout</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 JugaaduCart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing your order...</p>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
